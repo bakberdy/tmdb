@@ -1,0 +1,33 @@
+<!-- Main Page (movies.html) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="app">
+  <input type="text" id="searchInput" placeholder="Search for movies...">
+  <div class="menu-bar">
+    <div class="sort-options">
+      <label for="sort">Sort by:</label>
+      <select id="sort" onchange="fetchMovies()">
+        <option value="popularity.desc">Popularity</option>
+        <option value="release_date.desc">Release Date</option>
+        <option value="vote_average.desc">Rating</option>
+      </select>
+    </div>
+    <a href="watch_list/watch_list.html"><button>View Watchlist</button></a>
+  </div>
+  <div id="movieGrid" class="grid-container"></div>
+  <div id="movieModal" class="modal"></div>
+  <div id="overlay" class="overlay" onclick="closeModal()"></div>
+</div>
+<script src="index.js"></script>
+</body>
+</html>
+
